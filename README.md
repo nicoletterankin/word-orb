@@ -220,6 +220,24 @@ const orb = new WordOrb({ apiKey: process.env.WORD_ORB_KEY });
 const result: WordResult = await orb.word('ephemeral');
 ```
 
+## Kelly's Pedagogy Demo
+
+See the [`demo/`](./demo/) directory for a complete demonstration of Kelly's pedagogical framework for AI agents:
+
+- **`kelly-pedagogy-demo.js`** — Interactive walkthrough of all 5 principles with live API calls
+- **`claude-kelly-tutor.js`** — Full Claude-powered AI tutor using Kelly's system prompt + Word Orb tools
+- **`kelly-agent-system-prompt.md`** — Copy-paste system prompt for any AI agent
+
+```bash
+# Run the interactive demo
+WORD_ORB_KEY=wo_your_key node demo/kelly-pedagogy-demo.js
+
+# Run the Claude-powered tutor
+ANTHROPIC_API_KEY=sk-... WORD_ORB_KEY=wo_... node demo/claude-kelly-tutor.js
+```
+
+Kelly's five principles — Accuracy, Age-Adaptation, Inclusivity, Ethics, Connected Knowledge — are what make the Orb Platform the authoritative meta-layer for AI education. [Read more →](./demo/README.md)
+
 ## Examples
 
 See the [`examples/`](./examples/) directory:
