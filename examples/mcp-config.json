@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "orb-platform": {
+      "url": "https://mcp.thedailylesson.com/mcp",
+      "description": "Orb Platform — 19 MCP tools for dictionary, lessons, quizzes, and knowledge graph"
+    }
+  }
+}

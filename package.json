@@ -1,0 +1,17 @@
+{
+  "name": "@lotd/word-orb",
+  "version": "1.0.0",
+  "description": "Language infrastructure for AI agents. 162K words, 47 languages, 240K audio files. Deterministic edge delivery.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": ["index.js", "index.d.ts", "README.md"],
+  "engines": { "node": ">=18.0.0" },
+  "keywords": ["word-orb", "dictionary", "translation", "education", "mcp", "ai", "language", "ethics", "kelly", "agents", "robotics", "nlp"],
+  "author": "Lesson of the Day PBC <hello@lotdpbc.com>",
+  "license": "MIT",
+  "homepage": "https://word-orb-api.nicoletterankin.workers.dev/pricing",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lotdpbc/word-orb"
+  }
+}
