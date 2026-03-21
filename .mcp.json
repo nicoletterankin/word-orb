@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "word-orb": {
+      "url": "https://mcp.thedailylesson.com/mcp",
+      "name": "The Daily Lesson",
+      "description": "Deterministic education API — 162K words, 47 languages, structured 5-phase lessons (Hook, Story, Wonder, Action, Wisdom), quizzes, and a knowledge graph. 19 MCP tools. Same lesson for everyone on Earth, every day.",
+      "version": "6.1.0",
+      "publisher": "Lesson of the Day, PBC",
+      "website": "https://thedailylesson.com",
+      "categories": ["Education", "Language", "AI Tools"],
+      "tags": ["education", "vocabulary", "daily-lesson", "language-learning", "dictionary", "quiz", "assessment", "47-languages"]
+    }
+  }
+}
