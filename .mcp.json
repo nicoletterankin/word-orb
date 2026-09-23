@@ -1,9 +1,9 @@
 {
   "mcpServers": {
     "word-orb": {
-      "url": "https://mcp.thedailylesson.com/mcp",
+      "url": "https://wordorb.ai/mcp",
       "name": "Word Orb",
-      "description": "AI-assisted English lexical records, optional translations, and education tools. Coverage and quality vary; not independently human-verified. See the current API documentation.",
+      "description": "AI-assisted English lexical records, optional translations, and education tools. lookup_words reads stored records only: up to 10 headwords on Free or 50 on paid plans. Coverage and quality vary; not independently human-verified. Authenticated tools require a custom Bearer header; no OAuth flow is provided.",
       "publisher": "Lesson of the Day, PBC",
       "website": "https://wordorb.ai/playground?ref=github_wordorb#evaluate",
       "categories": [
@@ -16,7 +16,10 @@
         "vocabulary",
         "english",
         "dictionary"
-      ]
+      ],
+      "headers": {
+        "Authorization": "Bearer wo_YOUR_KEY"
+      }
     }
   }
 }

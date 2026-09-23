@@ -42,10 +42,40 @@ Start with the [word-list evaluator](https://wordorb.ai/playground?ref=github_wo
 
 ## MCP
 
-The existing MCP Registry identity is `io.github.nicoletterankin/orb-platform`, with a remote endpoint at `https://mcp.thedailylesson.com/mcp`. Consult your client's remote MCP configuration instructions and the current [Word Orb docs](https://wordorb.ai/docs?ref=github_wordorb). MCP tools and individual lookups are separate from the stored-only batch example.
+The canonical remote endpoint is `https://wordorb.ai/mcp` over Streamable HTTP. The existing MCP Registry identity remains `io.github.nicoletterankin/orb-platform`; [server.json](server.json) describes version `6.3.1` under that identity.
+
+### Stored-only glossary lookup
+
+Use the `lookup_words` tool with an array of English headwords:
+
+```json
+{"words":["courage","wisdom","resilience"]}
+```
+
+The tool reads existing records and keeps missing words and unavailable fields explicit. It does not generate missing content. Free handles up to 10 words per batch; paid plans handle up to 50. Records are AI-assisted and incomplete, and upgrading does not improve their correctness or fill missing translations.
+
+This tool requires a Word Orb API key in the request header, `Authorization: Bearer wo_YOUR_KEY`. Use a client that supports custom headers for a remote MCP server; follow that client's instructions for storing the actual key locally as a secret. Do not paste keys into tool arguments, URLs, chat messages, or committed configuration files. The placeholder below is not a working key.
+
+```json
+{
+  "mcpServers": {
+    "word-orb": {
+      "url": "https://wordorb.ai/mcp",
+      "headers": {
+        "Authorization": "Bearer wo_YOUR_KEY"
+      }
+    }
+  }
+}
+```
+
+Client configuration formats vary. This integration does not provide an OAuth sign-in flow and is not a universal one-click setup for every MCP client. The daily-word tool is public; authenticated tools use the account's existing limits. Other tools, including individual word lookup, can behave differently from stored-only `lookup_words`; review their descriptions before use.
+
+Start with the [word-list evaluator and free key](https://wordorb.ai/playground?ref=github_wordorb#evaluate), then consult the current [Word Orb docs](https://wordorb.ai/docs?ref=github_wordorb). Choose a paid plan only when its capacity or capabilities fit your application.
 
 ## Data use and software license
 
 This repository's client software is MIT licensed. That license does not grant redistribution rights to API content. This repository does not offer an offline dictionary or a corpus redistribution license; consult the service terms for API data use.
 
 Built by [Lesson of the Day PBC](https://lotdpbc.com).
+
