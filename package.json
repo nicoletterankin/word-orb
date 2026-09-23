@@ -1,17 +1,33 @@
 {
   "name": "@lotd/word-orb",
   "version": "1.0.0",
-  "description": "Language infrastructure for AI agents. 162K words, 47 languages, 240K audio files. Deterministic edge delivery.",
+  "description": "Stored AI-assisted English lexical records with optional translations. Coverage and quality vary; not independently human-verified.",
   "main": "index.js",
   "types": "index.d.ts",
-  "files": ["index.js", "index.d.ts", "README.md"],
-  "engines": { "node": ">=18.0.0" },
-  "keywords": ["word-orb", "dictionary", "translation", "education", "mcp", "ai", "language", "ethics", "kelly", "agents", "robotics", "nlp"],
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "word-orb",
+    "dictionary",
+    "vocabulary",
+    "glossary",
+    "education",
+    "mcp",
+    "english",
+    "nlp"
+  ],
   "author": "Lesson of the Day PBC <hello@lotdpbc.com>",
   "license": "MIT",
-  "homepage": "https://word-orb-api.nicoletterankin.workers.dev/pricing",
+  "homepage": "https://wordorb.ai/playground?ref=github_wordorb#evaluate",
   "repository": {
     "type": "git",
     "url": "https://github.com/nicoletterankin/word-orb"
   }
 }
+
