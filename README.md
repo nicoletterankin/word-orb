@@ -14,7 +14,7 @@ Use Node.js 18 or later and an existing Word Orb API key. No package installatio
 node examples/batch-glossary.mjs courage wisdom resilience
 ```
 
-The default batch size is 10 words, suitable for the free plan. Paid plans support batches of up to 50; set `WORDORB_BATCH_SIZE=50` when your plan supports it. Output is JSON for inspection or integration into your application. Display results to users only after evaluating their suitability for your use case.
+The default batch size is 10 words, suitable for the $0 plan. Paid plans support batches of up to 50; set `WORDORB_BATCH_SIZE=50` when your plan supports it. Output is JSON for inspection or integration into your application. Display results to users only after evaluating their suitability for your use case.
 
 `POST https://wordorb.ai/api/words/batch` accepts `{"words":["courage","wisdom"]}` with an `Authorization: Bearer ...` header. Batch lookup only reads stored records. Unknown words remain missing; a stored response is not a guarantee of factual accuracy. Translation, pronunciation and other fields may be absent.
 
@@ -36,7 +36,7 @@ The client's `word()` method uses the individual lookup endpoint, whose behavior
 
 ## Plans
 
-Free API keys allow 10,000 calls per day with a limit of 10 requests per minute and batches of up to 10 words. Starter is $9/month, including 150,000 calls per UTC calendar month, then $0.0006 per additional call, plus batches up to 50 and TextOrb. The included allowance resets on the first day of each UTC calendar month, separately from subscription renewal. When Starter metered billing is active, the displayed 5,000-call daily baseline does not block additional calls. Pro is $49/month with 50,000 calls per day; Scale is $149/month. See the [current pricing page](https://wordorb.ai/pricing?ref=github_wordorb) for full limits and terms.
+$0-tier API keys allow 10,000 calls per day with a limit of 10 requests per minute and batches of up to 10 words. Starter is $9/month, including 150,000 calls per UTC calendar month, then $0.0006 per additional call, plus batches up to 50 and TextOrb. The included allowance resets on the first day of each UTC calendar month, separately from subscription renewal. When Starter metered billing is active, the displayed 5,000-call daily baseline does not block additional calls. Pro is $49/month with 50,000 calls per day; Scale is $149/month. See the [current pricing page](https://wordorb.ai/pricing?ref=github_wordorb) for full limits and terms.
 
 Start with the [word-list evaluator](https://wordorb.ai/playground?ref=github_wordorb#evaluate) to check real coverage and field availability before integrating. Do not assume 47 complete dictionaries, editorial verification or complete audio coverage.
 
@@ -52,7 +52,7 @@ Use the `lookup_words` tool with an array of English headwords:
 {"words":["courage","wisdom","resilience"]}
 ```
 
-The tool reads existing records and keeps missing words and unavailable fields explicit. It does not generate missing content. Free handles up to 10 words per batch; paid plans handle up to 50. Records are AI-assisted and incomplete, and upgrading does not improve their correctness or fill missing translations.
+The tool reads existing records and keeps missing words and unavailable fields explicit. It does not generate missing content. The $0 tier handles up to 10 words per batch; paid plans handle up to 50. Records are AI-assisted and incomplete, and upgrading does not improve their correctness or fill missing translations.
 
 This tool requires a Word Orb API key in the request header, `Authorization: Bearer wo_YOUR_KEY`. Use a client that supports custom headers for a remote MCP server; follow that client's instructions for storing the actual key locally as a secret. Do not paste keys into tool arguments, URLs, chat messages, or committed configuration files. The placeholder below is not a working key.
 
@@ -71,7 +71,7 @@ This tool requires a Word Orb API key in the request header, `Authorization: Bea
 
 Client configuration formats vary. This integration does not provide an OAuth sign-in flow and is not a universal one-click setup for every MCP client. The daily-word tool is public; authenticated tools use the account's existing limits. Other tools, including individual word lookup, can behave differently from stored-only `lookup_words`; review their descriptions before use.
 
-Start with the [word-list evaluator and free key](https://wordorb.ai/playground?ref=github_wordorb#evaluate), then consult the current [Word Orb docs](https://wordorb.ai/docs?ref=github_wordorb). Choose a paid plan only when its capacity or capabilities fit your application.
+Start with the [word-list evaluator and $0-tier key](https://wordorb.ai/playground?ref=github_wordorb#evaluate), then consult the current [Word Orb docs](https://wordorb.ai/docs?ref=github_wordorb). Choose a paid plan only when its capacity or capabilities fit your application.
 
 ## Data use and software license
 
